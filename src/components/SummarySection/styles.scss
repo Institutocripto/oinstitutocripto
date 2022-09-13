@@ -1,0 +1,85 @@
+@import "../../styles/screens";
+
+.summary {
+  &__container {
+    &:first-of-type {
+      margin: 106px 0;
+    }
+
+    &:nth-of-type(2) {
+      padding-bottom: 48px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    @media (min-width: $screen-lg) {
+      justify-content: unset;
+    }
+
+    img {
+      display: none;
+
+      @media (min-width: $screen-lg) {
+        display: unset;
+        flex: 1;
+      }
+    }
+  }
+
+  &__text {
+    &-wrapper {
+      max-width: 485px;
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        color: var(--color-dark);
+        margin-bottom: 8px;
+
+        @media (min-width: $screen-lg) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    &-paragraph {
+      p {
+        line-height: 1.4;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__list {
+    > strong {
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      list-style: none;
+
+      padding: 0;
+      margin-left: 0;
+
+      li {
+        font-weight: 700;
+
+        &::before {
+          content: url(/src/assets/svg/check.svg);
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}

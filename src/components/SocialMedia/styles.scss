@@ -1,0 +1,31 @@
+@import "../../styles/screens";
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  color: var(--color-white);
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    text-align: right;
+  }
+}

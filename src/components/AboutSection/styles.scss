@@ -1,0 +1,252 @@
+@import "../../styles/screens";
+
+.about {
+  padding-top: 40px;
+  padding-bottom: 0;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+  @media (min-width: $screen-md) {
+    padding-top: 112px;
+    flex-direction: row;
+
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0px 16px;
+
+    @media (min-width: $screen-md) {
+      padding: 0px;
+    }
+
+    .zap-icon {
+      margin-bottom: 40px;
+    }
+
+    &-warranty {
+      position: relative;
+
+      margin-top: 34px;
+      color: #424242;
+
+      line-height: 1.6;
+      text-align: center;
+
+      &::after {
+        content: url(../../assets/svg/bg_mark.svg);
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        margin-top: -12px;
+      }
+    }
+
+    > p {
+      color: var(--color-pure);
+
+      font-size: 1.125rem;
+      line-height: 1.6;
+
+      text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: var(--color-dark);
+      font-size: 1.5 rem;
+      font-weight: 800;
+
+      line-height: 1.2;
+
+      text-align: center;
+
+      margin-bottom: 36px;
+
+      @media (min-width: $screen-md) {
+        max-width: 800px;
+        font-size: 3.25rem;
+      }
+
+      > strong {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          inset: 0;
+          top: 50%;
+          height: 32px;
+
+          z-index: -1;
+
+          background: linear-gradient(
+            90deg,
+            #44bcff -0.55%,
+            #44b0ff 22.86%,
+            #ff44ec 48.36%,
+            #ff44ec 73.33%,
+            #ff675e 99.34%
+          );
+          filter: blur(32px);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+      }
+    }
+
+    &-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      @media (min-width: $screen-md) {
+        flex-direction: row;
+      }
+
+      p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+
+        margin: 0;
+
+        font-size: 1rem;
+        line-height: 1.6;
+
+        @media (min-width: $screen-md) {
+          align-items: unset;
+        }
+
+        strong {
+          color: #424242;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 72px;
+
+    overflow: hidden;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__box {
+    position: relative;
+
+    background: var(--color-linear-dark);
+    border-radius: 8px;
+    padding: 36px 20px;
+
+    color: var(--color-white);
+
+    @media (min-width: $screen-md) {
+      padding: 72px;
+    }
+
+    > *:not(:last-child) {
+      z-index: 1;
+    }
+
+    h2 {
+      color: var(--color-white);
+
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 29px;
+
+      @media (min-width: $screen-md) {
+        max-width: 436px;
+        line-height: 58px;
+        font-size: 3rem;
+      }
+
+      > strong {
+        display: inline-block;
+        font-weight: 700;
+        background-image: var(--color-linear-pink);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 1.5rem;
+
+        @media (min-width: $screen-md) {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    p {
+      margin-top: 24px;
+
+      @media (min-width: $screen-md) {
+        max-width: 408px;
+      }
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+
+      gap: 40px;
+
+      margin-top: 52px;
+
+      @media (min-width: $screen-md) {
+        max-width: 480px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      &-item {
+        h3 {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.2;
+
+          margin-top: 16px;
+          margin-bottom: 16px;
+        }
+
+        p {
+          line-height: 1.5;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    > img {
+      display: none;
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      margin-top: 40px;
+      margin-right: -72px;
+
+      z-index: 0;
+
+      @media (min-width: 1154px) {
+        display: unset;
+      }
+    }
+  }
+}

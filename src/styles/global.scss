@@ -1,0 +1,90 @@
+:root {
+  // Colors
+  --color-white: #ffffff;
+  --color-dark: #0b0b0b;
+  --color-pink: #f974cc;
+  --color-pure: #292b38;
+  --color-linear-dark: linear-gradient(
+    90.29deg,
+    #292b38 -18.59%,
+    #1e202d 99.75%
+  );
+  --color-linear-primary: linear-gradient(
+    102.16deg,
+    #ffb9ba 0%,
+    #f974cc 49.24%,
+    #7b61ff 100%
+  );
+  --color-linear-pink: linear-gradient(
+    90deg,
+    #44bcff -0.55%,
+    #44b0ff 22.86%,
+    #ff44ec 48.36%,
+    #ff44ec 73.33%,
+    #ff675e 99.34%
+  );
+
+  // Screen
+  --screen-max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__content {
+    max-width: var(--screen-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.blur-text{
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    top: 25%;
+    height: 32px;
+
+    z-index: -1;
+
+    background: linear-gradient(
+      90deg,
+      #44bcff -0.55%,
+      #44b0ff 22.86%,
+      #ff44ec 48.36%,
+      #ff44ec 73.33%,
+      #ff675e 99.34%
+    );
+    filter: blur(28px);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}
